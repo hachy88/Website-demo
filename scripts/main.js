@@ -21,7 +21,7 @@ function initNavigation() {
         navToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('open');
-            
+
             // Update aria attribute for accessibility
             const isExpanded = navToggle.classList.contains('open');
             navToggle.setAttribute('aria-expanded', isExpanded);
@@ -53,10 +53,10 @@ function initNavigation() {
  */
 function initScrollAnimations() {
     const scrollElements = document.querySelectorAll('.scroll-trigger');
-    
+
     // Check if the user prefers reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
+
     if (prefersReducedMotion) {
         // Automatically make everything visible if reduced motion is preferred
         scrollElements.forEach(el => el.classList.add('is-visible'));
